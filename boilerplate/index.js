@@ -4,9 +4,13 @@ const app = express()
 
 const PORT = 3000
 
-app.get('/', (req, res) => {
-    res.send('Hello World!!!')
-})
+// Routes
+app.use('/', require('./routes/indexRouter'));
+
+// 404 handler
+app.use((req, res) => {
+    res.status(404).send('<h2>404: Not found</h2>');
+});
 
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}...`)
