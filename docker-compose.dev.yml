@@ -1,0 +1,12 @@
+services:
+  boilerplate:
+    build: 
+      target: dev
+    container_name: boilerplate_dev
+    volumes:
+      - ./boilerplate:/usr/src/app
+      - /usr/src/app/node_modules
+    ports:
+      - "${BOILER_PORT_DEV}:${BOILER_PORT_DEV}"
+    environment:
+      - PORT=$BOILER_PORT_DEV

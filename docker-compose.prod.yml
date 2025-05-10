@@ -1,0 +1,6 @@
+services:
+  boilerplate:
+    build:
+      target: prod
+    container_name: boilerplate_prod
+
