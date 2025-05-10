@@ -1,0 +1,9 @@
+services:
+  boilerplate:
+    build: ./boilerplate
+    env_file:
+      - ./boilerplate/.env
+    ports:
+      - "${BOILER_PORT}:${BOILER_PORT}"
+    environment:
+      - PORT=$BOILER_PORT
