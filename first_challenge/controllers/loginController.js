@@ -1,3 +1,5 @@
+const jwt = require("jsonwebtoken");
+
 const loginController = {};
 
 const credentials = {
@@ -14,7 +16,15 @@ loginController.login = (req, res) => {
         req.body.username === credentials.username &&
         req.body.password === credentials.password
     ) {
-        res.send("Login Succesful");
+        const token = jwt.sign(
+            { username: credentials.username },
+            "anotherSecret",
+            { expiresIn: "1h" }
+        );
+        res.json({
+            message: "Login Successful",
+            token: token,
+        });
     } else {
         res.send("Incorrect credentials");
     }
