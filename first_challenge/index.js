@@ -4,8 +4,14 @@ const app = express()
 
 const PORT = process.env.PORT
 
+
+// Middleware
+app.use(express.json())
+app.use(express.urlencoded({extended:true}))
+
 // Routes
 app.use('/', require('./routes/indexRouter'));
+app.use('/login', require('./routes/loginRouter'));
 
 // 404 handler
 app.use((req, res) => {
