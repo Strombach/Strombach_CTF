@@ -26,7 +26,9 @@ loginController.loginPost = (req, res) => {
             token: token,
         });
     } else {
-        res.send("Incorrect credentials");
+        res.json({
+            message: "Login Failed",
+        });
     }
 };
 

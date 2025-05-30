@@ -3,6 +3,36 @@
     padding: 0;
 }
 
-#title {
-    color: blue;
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-color: darkgrey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#app,
+#login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rounded_input {
+    border-radius: 15px;
+    border: 2px solid #ccc;
+    padding: 5px;
+}
+
+.error {
+    color: red;
+}
+
+.success {
+    color: green;
 }
