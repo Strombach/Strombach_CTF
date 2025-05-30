@@ -5,6 +5,6 @@ const router = express.Router();
 
 router.get("/", controller.index);
 
-router.post("/", controller.login);
+router.post("/", controller.loginPost);
 
 module.exports = router;

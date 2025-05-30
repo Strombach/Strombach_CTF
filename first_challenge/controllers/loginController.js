@@ -11,7 +11,7 @@ loginController.index = (req, res) => {
     res.send(`<h2>Hello From LoginController</h2>`);
 };
 
-loginController.login = (req, res) => {
+loginController.loginPost = (req, res) => {
     if (
         req.body.username === credentials.username &&
         req.body.password === credentials.password
