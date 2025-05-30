@@ -1,25 +1,24 @@
 services:
-# TODO: Remove boilerplate from dockerfile.
-  boilerplate:
-    build: 
-      target: dev
-    container_name: boilerplate_dev
-    volumes:
-      - ./boilerplate:/usr/src/app
-      - /usr/src/app/node_modules
-    ports:
-      - "${BOILER_PORT_DEV}:${BOILER_PORT_DEV}"
-    environment:
-      - PORT=$BOILER_PORT_DEV
+    # boilerplate:
+    #   build:
+    #     target: dev
+    #   container_name: boilerplate_dev
+    #   volumes:
+    #     - ./boilerplate:/usr/src/app
+    #     - /usr/src/app/node_modules
+    #   ports:
+    #     - "${BOILER_PORT_DEV}:${BOILER_PORT_DEV}"
+    #   environment:
+    #     - PORT=$BOILER_PORT_DEV
 
-  first_challenge:
-    build: 
-      target: dev
-    container_name: first_challenge_dev
-    volumes:
-      - ./first_challenge:/usr/src/app
-      - /usr/src/app/node_modules
-    ports:
-      - "${FIRST_CHALLENGE_PORT}:${FIRST_CHALLENGE_PORT}"
-    environment:
-      - PORT=$FIRST_CHALLENGE_PORT
+    first_challenge:
+        build:
+            target: dev
+        container_name: first_challenge_dev
+        volumes:
+            - ./first_challenge:/usr/src/app
+            - /usr/src/app/node_modules
+        ports:
+            - "${FIRST_CHALLENGE_PORT}:${FIRST_CHALLENGE_PORT}"
+        environment:
+            - PORT=$FIRST_CHALLENGE_PORT

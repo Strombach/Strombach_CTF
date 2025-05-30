@@ -1,6 +1,10 @@
 services:
-  boilerplate:
-    build:
-      target: prod
-    container_name: boilerplate_prod
+    # boilerplate:
+    #     build:
+    #         target: prod
+    #     container_name: boilerplate_prod
 
+    first_challenge:
+        build:
+            target: prod
+        container_name: first_challenge

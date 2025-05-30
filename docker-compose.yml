@@ -1,18 +1,18 @@
 services:
-  boilerplate:
-    build: ./boilerplate
-    env_file:
-      - ./boilerplate/.env
-    ports:
-      - "${BOILER_PORT}:${BOILER_PORT}"
-    environment:
-      - PORT=$BOILER_PORT
+    # boilerplate:
+    #   build: ./boilerplate
+    #   env_file:
+    #     - ./boilerplate/.env
+    #   ports:
+    #     - "${BOILER_PORT}:${BOILER_PORT}"
+    #   environment:
+    #     - PORT=$BOILER_PORT
 
-  first_challenge:
-    build: ./first_challenge
-    env_file:
-      - ./first_challenge/.env
-    ports:
-      - "${FIRST_CHALLENGE_PORT}:${FIRST_CHALLENGE_PORT}"
-    environment:
-      - PORT=$FIRST_CHALLENGE_PORT
+    first_challenge:
+        build: ./first_challenge
+        env_file:
+            - ./first_challenge/.env
+        ports:
+            - "${FIRST_CHALLENGE_PORT}:${FIRST_CHALLENGE_PORT}"
+        environment:
+            - PORT=$FIRST_CHALLENGE_PORT
